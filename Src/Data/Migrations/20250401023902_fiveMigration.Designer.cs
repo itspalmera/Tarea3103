@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clase3103.src.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250401011137_fourMigration")]
-    partial class fourMigration
+    [Migration("20250401023902_fiveMigration")]
+    partial class fiveMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,11 +63,13 @@ namespace Clase3103.src.Data.Migrations
 
             modelBuilder.Entity("Clase3103.Src.Models.Product", b =>
                 {
-                    b.HasOne("Clase3103.Src.Models.Store", null)
+                    b.HasOne("Clase3103.Src.Models.Store", "Store")
                         .WithMany("Products")
                         .HasForeignKey("StoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Store");
                 });
 
             modelBuilder.Entity("Clase3103.Src.Models.Store", b =>

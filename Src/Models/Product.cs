@@ -14,5 +14,6 @@ namespace Clase3103.Src.Models
         public int Price { get; set; }
 
         public int StoreId { get; set; }
+        public Store Store {get; set;} = null!; // Relación con la tienda
     }
 }

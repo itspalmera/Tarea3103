@@ -12,5 +12,17 @@ namespace Clase3103.Src.Data
     {
         public required DbSet<Store> Stores { get; set; }
         public required DbSet<Product> Products { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Store)
+                .WithMany(s => s.Products) // Configura la relación de uno a muchos
+                .HasForeignKey(p => p.StoreId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }
+

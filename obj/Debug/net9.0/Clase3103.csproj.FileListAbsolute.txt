@@ -155,3 +155,4 @@ C:\Users\pamev\Desktop\Clases\Clase3103\obj\Debug\net9.0\refint\Clase3103.dll
 C:\Users\pamev\Desktop\Clases\Clase3103\obj\Debug\net9.0\Clase3103.pdb
 C:\Users\pamev\Desktop\Clases\Clase3103\obj\Debug\net9.0\Clase3103.genruntimeconfig.cache
 C:\Users\pamev\Desktop\Clases\Clase3103\obj\Debug\net9.0\ref\Clase3103.dll
+C:\Users\pamev\Desktop\Clases\Clase3103\obj\Debug\net9.0\Clase3103.sourcelink.json

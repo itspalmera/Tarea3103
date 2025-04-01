@@ -60,11 +60,13 @@ namespace Clase3103.src.Data.Migrations
 
             modelBuilder.Entity("Clase3103.Src.Models.Product", b =>
                 {
-                    b.HasOne("Clase3103.Src.Models.Store", null)
+                    b.HasOne("Clase3103.Src.Models.Store", "Store")
                         .WithMany("Products")
                         .HasForeignKey("StoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Store");
                 });
 
             modelBuilder.Entity("Clase3103.Src.Models.Store", b =>
